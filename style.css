@@ -1,0 +1,632 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #040216;
+    color: white;
+}
+
+button {
+    padding: 1% 4%;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 0.9375rem;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, rgba(0,41,247,1), rgba(252,70,233,1));
+}
+
+button:hover {
+    background: linear-gradient(90deg, rgba(252,70,233,1), rgba(0,41,247,1)  );
+}
+
+
+
+
+header {
+    min-height: 100vh;
+}
+
+
+/*navigation bar*/
+
+nav {
+    display: flex;
+    padding: 1.2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    background: -webkit-linear-gradient(130deg, rgba(0,41,247,1) 15%, rgba(252,70,233,1) 56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links i {
+    display: none;
+}
+
+.nav > i {
+    display: none;
+}
+
+.nav-links {
+    text-align: center
+}
+
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: aqua;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: brown;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+form > button {
+    padding: 15% 60%;
+}
+
+
+/*home*/
+
+.home {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+}
+
+.home > h1 {
+    text-transform: capitalize;
+    font-size: 2.20rem;
+    margin-top: 10%;
+}
+
+.auto-type {
+    color: orange;
+}
+
+.home > p {
+    padding-top: 5%;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    font-size: large;
+
+}
+
+.home-info > i {
+    padding-top: 0.5%;
+}
+
+
+.home-info {
+    padding: 2% 10%;
+    margin-top: 12%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(0,41,247,1) 15%, rgba(252,70,233,1) 56%);
+    border-radius: 35px;
+    color: white;
+}
+
+.home-infos > p {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+
+/*about*/
+
+.about {
+    display: flex;
+    margin: 0% 10%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-img > img {
+    width: 300%;
+}
+
+.about-img > h2 {
+    text-transform: capitalize;
+    font-size: 1.50rem;
+}
+
+.about-info {
+    padding-left: 35%;
+    line-height: 30px;
+    margin-top: 8%;
+    font-size: 1.1rem;
+}
+
+.about-info > button {
+    margin-top: 10%;
+    padding: 2% 8%;
+}
+
+/*education*/
+
+.education {
+    margin: 8% 10%;
+}
+
+.education > h2 {
+    font-size: 1.50rem;
+    margin-bottom: 3%;
+}
+
+.edu-cards {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card {
+    width: 33%;
+    margin: 0% 3%;
+    border-radius: 15px;
+    padding-bottom: 1%;
+    box-shadow: 0 0 20px 0 silver;
+}
+
+.card:hover {
+    background-color: #3b3191;
+    box-shadow: 0 0 0 0 silver;
+}
+
+.card > img{
+    margin: 5%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: fill;
+    box-shadow: 0 0 10px 0 silver;
+}
+
+.card > p {
+    margin: 6% 4%;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+
+.card > a {
+    text-decoration: none;
+    text-transform:capitalize;
+    color: white;
+}
+
+/*hobby cards*/
+
+.hobby {
+    margin: 2% 10%;
+}
+
+.hobby > h2 {
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+.hobby-cards {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.hobby-card {
+    width: 25%;
+}
+
+
+
+.hobby-card > img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px 0 silver;
+    transition: 0.5s;
+}
+
+.hobby-card > img:hover{
+    box-shadow: 0 0 20px 0 red;
+    border: 1px solid white;
+}
+
+.hobby-card > p {
+    text-transform: capitalize;
+    font-size: 1.20rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, rgba(0,41,247,1) 15%, rgba(252,70,233,1) 56%);
+    border-radius: 25px;
+    margin: 0 15%;
+    visibility: hidden;
+}
+
+.hobby-card:hover  p {
+    visibility: visible;
+    transform: translate(0, -120px);
+    box-shadow: 0 0 20px 0 rgb(221, 216, 216);
+    border: 1px solid white;
+}
+
+
+/*portfolio*/
+
+.portfolio {
+    margin: 2% 10%;
+}
+
+.portfolio > h2 {
+    text-transform: capitalize;
+    font-size: 1.50rem;
+    margin: 5% 0%;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+.container img {
+    height: 70vh;
+    flex: 1;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    transition: 0.5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.container img:hover {
+    flex: 3;
+}
+
+
+/*footer*/
+
+footer {
+    padding: 3% 10%;
+    min-height: 40vh;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-info > h1 {
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(130deg, rgba(0,41,247,1), rgba(252,70,233,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.footer-links ul li {
+    text-align: left;
+    list-style: none;
+    padding: 4% 0%;
+    position: relative;
+}
+
+.footer-links ul li a {
+    color: aqua;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.footer-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: brown;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.footer-links ul li:hover::after {
+    width: 100%;
+}
+
+
+.icons {
+    display: flex;
+}
+
+.icons > a {
+    margin: 0 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-size: 2.5rem;
+    -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.icons > a:hover {
+    background: var(--color);
+    color: white;
+    box-shadow: 0 0 5px var(--color),
+         0 0 25px var(--color),
+         0 0 50px var(--color),
+         0 0 200px var(--color),;
+}
+
+footer > p {
+    margin-top: 4%;
+    color: #6e6f69;
+}
+
+
+/*media quaries*/
+
+@media only screen and (max-width: 700px) {
+
+     .nav-links ul li {
+        display: block;
+     }
+
+    .nav-links {
+       position: absolute;
+       background-color: red;
+       height: 35vh;
+       width: 40%;
+       top: 0;
+       right: -40%;
+       z-index: 2;
+       text-align: left;
+       transition: 1s;
+    }
+
+    nav > form {
+        display: none;
+    }
+
+    .home {
+        height: 50vh;
+    }
+
+    .home-info {
+        display: none;
+    }
+
+    .nav-links > i {
+        display: block;
+        font-size: 22px;
+        margin: 10px 20px;
+        color: #fff;
+    }
+
+    .nav-links ul {
+        padding: 20px;
+    }
+
+    .nav > i {
+        display: block;
+        font-size: 22px;
+    }
+
+    .about {
+        display: block;
+    }
+
+    .about-img img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .about-info {
+       padding: 0;
+       text-align: center;
+    }
+
+    .edu-cards {
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-top: 10%;
+    }
+
+    .hobby-cards {
+       display: block;
+       width: 100%;
+    }
+
+    .hobby-card {
+        margin-left: 20%;
+    }
+
+    .hobby-card > p {
+        visibility: visible;
+        transform: translate(60px, -80px);
+        width: 100%;
+    }
+
+    .footer-info {
+        display: block;
+        width: 100%;
+    }
+
+    .footer-links ul li{
+        text-align: center;
+        align-items: center;
+        padding: 2px;
+    }
+
+    .footer-links ul li a {
+        font-size: 15px;
+    }
+    .icons {
+        padding: 0% 17%;
+        margin-bottom: 10%;
+    }
+
+    .icons > a {
+        font-size: 25px;   
+        -webkit-box-reflect: below -15px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    }
+
+    footer > p {
+        margin-bottom: 150px;
+        text-align: center;
+    }
+}
+ 
+
+@media only screen and (max-width: 892px) {
+
+   header {
+    width: 100vw;
+   }
+
+   nav {
+    padding: 20px 10px;
+    vertical-align: middle;
+   }
+
+   nav > h1 {
+    font-size: 1.5rem;
+   }
+    a {
+    font-size: 0.5rem ;
+   }
+
+   nav > form {
+    display: none;
+   }
+
+   .home {
+    margin-top: -200px;
+   }
+
+   .home-info {
+    display: none;
+   }
+
+   .about {
+    display: block;
+    margin-top: -450px;
+   }
+
+   .about-img {
+    width: 100vw;
+   }
+
+   .about-img > img {
+    width: 80%;
+    object-fit: cover;
+   }
+
+   .about-info {
+    text-align: center;
+    padding: 2% 10%;
+   }
+
+   .edu-cards {
+    display: grid; 
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+   }
+
+   .card {
+    width: 90%;
+    margin: 2% 10% ;
+   }
+
+   .card > a {
+     font-size: 18px;
+     padding-top: 1px;
+   }
+
+   .card3 {
+    margin:  10% 60%;
+   }
+
+   .hobby-cards {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+   }
+
+   .hobby-card > p {
+    visibility: visible;
+    transform: translate(50px, -80px);
+    width: 200%;
+}
+
+footer {
+    min-height: 70vh;
+    text-align: center;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.icons {
+    margin-top: -100px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+
+
+}
